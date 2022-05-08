@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Palindrome1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var input = Console.ReadLine();
+            int originalNumber = Convert.ToInt32(input);
+            Console.Write("The number you typed is: " + originalNumber + "\n");
+            var arrayOfChars = input.ToArray();
+            var reversedArrayOfCharacters = arrayOfChars.Reverse();
+            if (Enumerable.SequenceEqual(reversedArrayOfCharacters, input))
+            {
+                Console.WriteLine("Equal");
+            }
+            else Console.WriteLine("Not Equal");
+            Console.ReadLine();
+        }
+    }
+}
