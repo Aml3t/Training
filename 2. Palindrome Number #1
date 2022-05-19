@@ -13,24 +13,33 @@ namespace Palindrome1
             var input = Console.ReadLine();
             int originalNumber = Convert.ToInt32(input);
             Console.Write("The number you typed is: " + originalNumber + "\n");
-
-            //Convert string to array of characters
-            
-            var arrayOfChars = input.ToArray();
-
-            //Reverse array of characters
-
-            var reversedArrayOfCharacters = arrayOfChars.Reverse();
-            //Turn characters into a string
-
-            var resersedString = new string(reversedArrayOfCharacters.ToArray());
-            Console.WriteLine($"Original: {input}, Reverse:{resersedString}");
-            //Parse string into int
-            if (input == resersedString)
+            if (originalNumber < 0)
             {
-                Console.WriteLine("Equals!");
+                Console.WriteLine("The number is false");
+                
             }
-            else Console.WriteLine("Not Equal!");
+            else
+            {
+                //Convert string to array of characters
+
+                var arrayOfChars = input.ToArray();
+
+                //Reverse array of characters
+
+                var reversedArrayOfCharacters = arrayOfChars.Reverse();
+                //Turn characters into a string
+
+                var resersedString = new string(reversedArrayOfCharacters.ToArray());
+                Console.WriteLine($"Original: {input}, Reverse:{resersedString}");
+                //Parse string into int
+                if (input == resersedString)
+                {
+                    Console.WriteLine("Equals!");
+                }
+                else Console.WriteLine("Not Equal!");
+                Console.ReadLine();
+
+            }
             Console.ReadLine();
 
         }
